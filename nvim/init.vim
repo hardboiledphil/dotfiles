@@ -16,7 +16,7 @@ set relativenumber
 set number
 set termguicolors
 set undofile
-set spell
+set nospell
 set title
 set ignorecase
 set smartcase
@@ -50,6 +50,8 @@ nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 nmap <leader>k :nohlsearch<CR>
 nmap <leader>Q :bufdo bdelete<cr>
+
+nmap <leader>b :BufExplorer<CR>
 
 " Disable the cursor keys to stop newbies from using them to often
 cnoremap <Down> <Nop>
@@ -123,7 +125,6 @@ cmap w!! %!sudo tee > /dev/null %
 
 
 
-
 "--------------------------------------------------------------------------
 " Plugins
 "--------------------------------------------------------------------------
@@ -138,7 +139,7 @@ endif
 call plug#begin(data_dir . '/plugins')
 
 source ~/.config/nvim/plugins/gruvbox.vim
-"source ~/.config/nvim/plugins/airline.vim
+source ~/.config/nvim/plugins/airline.vim
 "source ~/.config/nvim/plugins/arduino.vim
 "source ~/.config/nvim/plugins/coc.vim
 "source ~/.config/nvim/plugins/commentary.vim
