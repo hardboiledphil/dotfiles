@@ -7,6 +7,8 @@
 - link:
     ~/.bashrc: bashrc
     ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+    ~/.config/nvim: nvim
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

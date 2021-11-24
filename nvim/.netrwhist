@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/phillip/.config/nvim'
+let g:netrw_dirhist_3='/home/phillip/.config'
+let g:netrw_dirhist_2='/home/phillip'
+let g:netrw_dirhist_1='/home/phillip/dev'
+let g:netrw_dirhist_0='/home/phillip/dev/gitrepo'
+let g:netrw_dirhist_9='/home/phillip/dev/gitrepo/rust'
+let g:netrw_dirhist_8='/home/phillip'
+let g:netrw_dirhist_7='/home/phillip/dev/gitrepo/mot/gops'
+let g:netrw_dirhist_6='/home/phillip/dev/gitrepo/mot'
+let g:netrw_dirhist_5='/home/phillip/dev/code/github/alpakka/doc-examples'
