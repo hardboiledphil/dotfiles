@@ -13,7 +13,6 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 set number relativenumber
-set nu rnu
 
 let mapleader=" "
 
