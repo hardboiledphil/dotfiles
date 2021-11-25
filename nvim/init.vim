@@ -36,7 +36,36 @@ set backup
 set backupdir=~/.local/share/nvim/backup//
 set updatetime=300 " Reduce time for highlighting other references
 set redrawtime=10000 " Allow more time for loading syntax on large files
+set showmode
+set cursorline
+set backspace=indent,eol,start
+set linespace=0
+set showmatch
+set incsearch
+set hlsearch
+set foldenable
 
+"--------------------------------------------------------------------------
+" Vim UI
+"--------------------------------------------------------------------------
+if has('cmdline_info')
+    set ruler                   " show the ruler
+        set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
+        set showcmd                 " show partial commands in status line and
+                                    " selected characters/lines in visual mode
+    endif
+
+    if has('statusline')
+        set laststatus=2
+
+        " Broken down into easily includeable segments
+        set statusline=%<%f\    " Filename
+        set statusline+=%w%h%m%r " Options
+        set statusline+=%{fugitive#statusline()} "  Git Hotness
+        set statusline+=\ [%{&ff}/%Y]            " filetype
+        set statusline+=\ [%{getcwd()}]          " current dir
+        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+    endif
 
 "--------------------------------------------------------------------------
 " Key maps
@@ -124,7 +153,6 @@ imap ,, <Esc>A,<Esc>
 cmap w!! %!sudo tee > /dev/null %
 
 
-
 "--------------------------------------------------------------------------
 " Plugins
 "--------------------------------------------------------------------------
@@ -151,7 +179,7 @@ source ~/.config/nvim/plugins/airline.vim
 "source ~/.config/nvim/plugins/exchange.vim
 "source ~/.config/nvim/plugins/firenvim.vim
 "source ~/.config/nvim/plugins/floaterm.vim
-"source ~/.config/nvim/plugins/fugitive.vim
+source ~/.config/nvim/plugins/fugitive.vim
 "source ~/.config/nvim/plugins/fzf.vim
 "source ~/.config/nvim/plugins/heritage.vim
 "source ~/.config/nvim/plugins/lastplace.vim
