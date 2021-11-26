@@ -1,4 +1,5 @@
 {
+    "java.jdt.ls.vmargs": "-javaagent:/Users/phillip/.m2/lombok.jar",
     "java.home": "/Users/phillip/.sdkman/candidates/java/11.0.11.hs-adpt",
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
