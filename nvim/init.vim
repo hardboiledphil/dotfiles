@@ -152,6 +152,15 @@ imap ,, <Esc>A,<Esc>
 
 cmap w!! %!sudo tee > /dev/null %
 
+" Telescope config
+" Find files using Telescope command-line sugar
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
+
 
 "--------------------------------------------------------------------------
 " Plugins
@@ -169,6 +178,8 @@ call plug#begin(data_dir . '/plugins')
 source ~/.config/nvim/plugins/gruvbox.vim
 source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/coc.vim
+source ~/.config/nvim/plugins/telescope.vim
+source ~/.config/nvim/plugins/treesitter.vim
 "source ~/.config/nvim/plugins/commentary.vim
 "source ~/.config/nvim/plugins/context-commentstring.vim
 "source ~/.config/nvim/plugins/dispatch.vim
