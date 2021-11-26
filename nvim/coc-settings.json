@@ -1,0 +1,12 @@
+{
+    "java.home": "/Users/phillip/.sdkman/candidates/java/11.0.11.hs-adpt",
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnType": true,
+    "git.enableGutters": true,
+    "git.addedSign.text": "┃",
+    "git.changedSign.text": "┃",
+    "git.removedSign.text": "▁",
+    "git.topRemovedSign.text": "▔",
+    "git.changeRemovedSign.text": "▔",
+    "prettier.requireConfig": true
+}
