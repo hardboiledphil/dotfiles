@@ -195,7 +195,7 @@ source ~/.config/nvim/plugins/fugitive.vim
 "source ~/.config/nvim/plugins/lastplace.vim
 "source ~/.config/nvim/plugins/lion.vim
 "source ~/.config/nvim/plugins/markdown-preview.vim
-"source ~/.config/nvim/plugins/nerdtree.vim
+source ~/.config/nvim/plugins/nerdtree.vim
 "source ~/.config/nvim/plugins/pasta.vim
 "source ~/.config/nvim/plugins/peekaboo.vim
 "source ~/.config/nvim/plugins/phpactor.vim
@@ -207,6 +207,7 @@ source ~/.config/nvim/plugins/fugitive.vim
 "source ~/.config/nvim/plugins/sayonara.vim
 "source ~/.config/nvim/plugins/smooth-scroll.vim
 "source ~/.config/nvim/plugins/splitjoin.vim
+source ~/.config/nvim/plugins/startify.vim
 "source ~/.config/nvim/plugins/surround.vim
 "source ~/.config/nvim/plugins/targets.vim
 "source ~/.config/nvim/plugins/textobj-xmlattr.vim
