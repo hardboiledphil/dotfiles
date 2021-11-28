@@ -1,6 +1,6 @@
 {
     "java.jdt.ls.vmargs": "-javaagent:/usr/bin/lombok.jar",
-    "java.home": "/home/phillip/.sdkman/candidates/java/11.0.11.hs-adpt",
+    "java.home": "~/.sdkman/candidates/java/11.0.11.hs-adpt",
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
     "git.enableGutters": true,
