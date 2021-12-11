@@ -159,8 +159,11 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-
-
+nnoremap <C-t> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeRespectWildIgnore=1
+set wildignore+=*.DS_Store,*.min.*
+autocmd BufWinEnter * silent NERDTreeMirror
 
 "--------------------------------------------------------------------------
 " Plugins
@@ -190,7 +193,7 @@ source ~/.config/nvim/plugins/treesitter.vim
 "source ~/.config/nvim/plugins/firenvim.vim
 "source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/fugitive.vim
-"source ~/.config/nvim/plugins/fzf.vim
+source ~/.config/nvim/plugins/fzf.vim
 "source ~/.config/nvim/plugins/heritage.vim
 "source ~/.config/nvim/plugins/lastplace.vim
 "source ~/.config/nvim/plugins/lion.vim
