@@ -150,6 +150,9 @@ imap jj <esc>
 imap ;; <Esc>A;<Esc>
 imap ,, <Esc>A,<Esc>
 
+" don't want to need to use shift to get the tilda
+imap ` ~
+
 cmap w!! %!sudo tee > /dev/null %
 
 " Telescope config
