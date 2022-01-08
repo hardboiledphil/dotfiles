@@ -9,5 +9,6 @@
     "git.removedSign.text": "▁",
     "git.topRemovedSign.text": "▔",
     "git.changeRemovedSign.text": "▔",
-    "prettier.requireConfig": true
+    "prettier.requireConfig": true,
+    "rust-analyzer.server.path": "~/.local/bin/rust-analyzer"
 }
