@@ -125,6 +125,7 @@ export PATH=~/bin/maven/apache-maven-3.3.3/bin:~/bin:$PATH
 #  source '/home/phillip/Downloads/tools/google-cloud-sdk/completion.bash.inc'
 #fi
 
+#Curl -s "https://get.sdkman.io" | bash
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
