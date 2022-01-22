@@ -108,7 +108,7 @@ cmp.setup {
       return vim_item
     end,
   },
-  sources = {
+  sources = { -- used for ordering the autocomplete
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
@@ -121,7 +121,7 @@ cmp.setup {
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
   },
   experimental = {
-    ghost_text = false,
+    ghost_text = true,
     native_menu = false,
   },
 }
