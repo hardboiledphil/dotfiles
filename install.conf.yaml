@@ -6,7 +6,6 @@
 
 - link:
     ~/.bashrc: bashrc
-    ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
     ~/.config/nvim: nvim
 

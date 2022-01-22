@@ -103,7 +103,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# this, if it's already enabled in /etc/bash.bashrc and /etc/pro/Users/phillip/dev/gitrepo/github/chrisatmachine/Neovim-from-scratch/lua/user/plugins.luafile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=~/bin/maven/apache-maven-3.3.3/bin:~/bin:$PATH
+export PATH=~/bin/maven/apache-maven-3.3.3/bin:/Users/phillip/Library/Python/3.8/bin:~/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 #if [ -f /home/phillip/Downloads/tools/google-cloud-sdk/path.bash.inc ]; then
