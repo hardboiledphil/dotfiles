@@ -1,6 +1,8 @@
 local home = os.getenv("HOME")
 local jdtls = require("jdtls")
 
+print("home -> " .. home)
+
 -- File types that signify a Java project's root directory. This will be
 -- used by eclipse to determine what constitutes a workspace
 local root_markers = { "gradlew", "mvnw", ".git", "pom.xml", "gradle.build" }
@@ -10,7 +12,7 @@ local root_dir = require("jdtls.setup").find_root(root_markers)
 -- with multiple different projects, each project must use a dedicated data directory.
 -- This variable is used to configure eclipse to use the directory name of the
 -- current project found using the root_marker as the folder for project specific data.
-local workspace_folder = "/Users/phillip/.cache/jdtls/workspace/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
+local workspace_folder = home .. "/.cache/jdtls/workspace/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 print("workspace set to -->" .. workspace_folder)
 -- Helper function for creating keymaps
 function nnoremap(rhs, lhs, bufopts, desc)
@@ -77,7 +79,7 @@ local config = {
           -- Use Google Java style guidelines for formatting
           -- To use, make sure to download the file from https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml
           -- and place it in the ~/.local/share/eclipse directory
-          url = "/Users/phillip/.config/nvim/java/checkstyle.xml",
+          url = home .. "/.config/nvim/java/checkstyle.xml",
           profile = "modpmstyle",
         },
       },
@@ -128,15 +130,15 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-17",
-            path = "/Users/phillip/.sdkman/candidates/java/17.0.6-tem",
+            path = home .. "/.sdkman/candidates/java/17.0.6-tem",
           },
           {
             name = "JavaSE-11",
-            path = "/Users/phillip/.sdkman/candidates/java/11.0.18-tem",
+            path = home .. "/.sdkman/candidates/java/11.0.18-tem",
           },
           {
             name = "JavaSE-1.8",
-            path = "/Users/phillip/.sdkman/candidates/java/8.0.332-librca",
+            path = home .. "/.sdkman/candidates/java/8.0.332-librca",
           },
         },
       },
@@ -148,7 +150,7 @@ local config = {
   -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
   -- for the full list of options
   cmd = {
-    "/Users/phillip/.sdkman/candidates/java/17.0.6-tem/bin/java",
+    home .. "/.sdkman/candidates/java/17.0.6-tem/bin/java",
     "-Declipse.application=org.eclipse.jdt.ls.core.id1",
     "-Dosgi.bundles.defaultStartLevel=4",
     "-Declipse.product=org.eclipse.jdt.ls.core.product",
@@ -161,18 +163,20 @@ local config = {
     "--add-opens",
     "java.base/java.lang=ALL-UNNAMED",
     -- If you use lombok, download the lombok jar and place it in ~/.local/share/eclipse
-    "-Xbootclasspath/p:/Users/phillip/.config/nvim/java/lombok.jar",
-    "-javaagent:/Users/phillip/.config/nvim/java/lombok.jar",
+    "-Xbootclasspath/p:"
+      .. home
+      .. "/.config/nvim/java/lombok.jar",
+    "-javaagent:" .. home .. "/.config/nvim/java/lombok.jar",
 
     -- The jar file is located where jdtls was installed. This will need to be updated
     -- to the location where you installed jdtls
     "-jar",
-    "/Users/phillip/dev/env/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
+    home .. "/dev/env/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
 
     -- The configuration for jdtls is also placed where jdtls was installed. This will
     -- need to be updated depending on your environment
     "-configuration",
-    "/Users/phillip/dev/env/jdtls/plugins/config_mac",
+    home .. "/dev/env/jdtls/plugins/config_mac",
 
     -- Use the workspace_folder defined above to store data for this project
     "-data",
