@@ -77,7 +77,7 @@ local config = {
           -- Use Google Java style guidelines for formatting
           -- To use, make sure to download the file from https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml
           -- and place it in the ~/.local/share/eclipse directory
-          url = "/Users/phillip/.local/share/java/checkstyle.xml",
+          url = "/Users/phillip/.config/nvim/java/checkstyle.xml",
           profile = "modpmstyle",
         },
       },
@@ -161,8 +161,8 @@ local config = {
     "--add-opens",
     "java.base/java.lang=ALL-UNNAMED",
     -- If you use lombok, download the lombok jar and place it in ~/.local/share/eclipse
-    "-Xbootclasspath/p:/Users/phillip/.local/share/java/lombok.jar",
-    "-javaagent:/Users/phillip/.local/share/java/lombok.jar",
+    "-Xbootclasspath/p:/Users/phillip/.config/nvim/java/lombok.jar",
+    "-javaagent:/Users/phillip/.config/nvim/java/lombok.jar",
 
     -- The jar file is located where jdtls was installed. This will need to be updated
     -- to the location where you installed jdtls
@@ -175,8 +175,8 @@ local config = {
     "/Users/phillip/dev/env/jdtls/plugins/config_mac",
 
     -- Use the workspace_folder defined above to store data for this project
-    --"-data",
-    --workspace_folder,
+    "-data",
+    workspace_folder,
   },
 }
 
