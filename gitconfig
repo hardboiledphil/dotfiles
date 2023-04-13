@@ -3,6 +3,7 @@
 	email = phil.abbott2@uk.bp.com
 	signingkey = 362AEF061D04E553
 [core]
+    editor = nvim
 	autocrlf = input
 [gpg]
 	program = gpg
@@ -11,5 +12,8 @@
 [tag]
 	forceSignAnnotated = false
 [credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential

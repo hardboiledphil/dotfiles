@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=~/bin/maven/apache-maven-3.3.3/bin:~/bin:$PATH
+#export PATH=~/bin/maven/apache-maven-3.3.3/bin:~/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 #if [ -f /home/phillip/Downloads/tools/google-cloud-sdk/path.bash.inc ]; then
@@ -128,4 +128,7 @@ export PATH=~/bin/maven/apache-maven-3.3.3/bin:~/bin:$PATH
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
+
+# Useful for work machine??
+#export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
