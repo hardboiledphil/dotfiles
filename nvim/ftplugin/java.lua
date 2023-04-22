@@ -1,13 +1,14 @@
 local jdtls_dir = vim.fn.stdpath("data") .. "/mason/packages/jdtls"
-local config_dir = jdtls_dir .. "/config_mac"
+local config_dir = jdtls_dir .. "/config_linux"
 local plugins_dir = jdtls_dir .. "/plugins"
 local path_to_jar = plugins_dir .. "/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"
 local path_to_lombok = jdtls_dir .. "/lombok.jar"
 local root_markers = { "gradlew", "mvnw", ".git", "pom.xml", "build.gradle" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
 
-local home = "/Users/phillip"
+local homedir = "/home/phillip"
 if root_dir == "" then
+  print("root directory was not found")
   return
 end
 
@@ -65,7 +66,7 @@ print("** keymappings assigned **")
 
 local config = {
   cmd = {
-    home .. "/.sdkman/candidates/java/17.0.6-tem/bin/java",
+    "java",
     "-Declipse.application=org.eclipse.jdt.ls.core.id1",
     "-Dosgi.bundles.defaultStartLevel=4",
     "-Declipse.product=org.eclipse.jdt.ls.core.product",
@@ -95,7 +96,7 @@ local config = {
 
   settings = {
     java = {
-      home = home .. "/.sdkman/candidates/java/17.0.6-tem",
+      home = homedir .. "/.sdkman/candidates/java/17.0.6-tem",
       eclipse = {
         downloadSources = true,
       },
@@ -104,15 +105,15 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-17",
-            path = home .. "/.sdkman/candidates/java/17.0.6-tem",
+            path = homedir .. "/.sdkman/candidates/java/17.0.6-tem",
           },
           {
             name = "JavaSE-11",
-            path = home .. "/.sdkman/candidates/java/11.0.18-tem",
+            path = homedir .. "/.sdkman/candidates/java/11.0.18-tem",
           },
           {
             name = "JavaSE-1.8",
-            path = home .. "/.sdkman/candidates/java/8.0.332-librca",
+            path = homedir .. "/.sdkman/candidates/java/8.0.332-librca",
           },
         },
       },
@@ -131,7 +132,7 @@ local config = {
       format = {
         enabled = true,
         settings = {
-          url = home .. "/.config/nvim/java/checkstyle.xml",
+          url = homedir .. "/.config/nvim/java/checkstyle.xml",
           profile = "ModpmStyle",
         },
       },
